@@ -11,7 +11,7 @@ export function Footer(){
             <p> Ananda Marga Room Booking System : A PROUT Tech Team Initiative.</p>
             <p>
                 made with love and utmost dedication towards Shri Shri Anandamurti Ji by
-                <a href="src/commons/components/Footer" target="_blank">PROUT Tech Team</a>
+                <a href="https://www.github.com/root-ansh" target="_blank">PROUT Tech Team</a>
             </p>
         </section>
 

@@ -6,10 +6,10 @@
   --gray_14: #343434;
   --black: #000000;
   --red:#faecec;
-  --green:#e0ffe5;
+  --green: #a0e1aa;
   --blue:#e1f2ff;
   --red_d:red;
-  --blue_d:#2151c5;
+  --blue_d: #2168c5;
   --green_d:green;
   --transparent:#00000000
 }
@@ -420,4 +420,130 @@ hr {
 
 .space_400{
   height: 200px;
+}
+
+
+.sec_rooms{
+  width: 100%;
+  height: 100vh;
+}
+
+.sec_result_area{
+  height: 100%;
+  background-color: var(--blue);
+  width: 79%;
+  float: left;
+  overflow: auto;
+}
+.sec_filters{
+  height: 100%;
+  width: 20%;
+  float: left;
+  overflow: auto;
+  border-right: 2px solid var(--gray_14);
+  border-bottom: none;
+  margin-right: 4px;
+  margin-bottom: 0;
+  font-size: 1rem;
+
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .sec_result_area{width: 100%}
+  .sec_filters{
+    height: 14rem;
+    width: 100%;
+    border-right: none;
+    border-bottom:  2px solid var(--gray_2);
+    margin-right: 0;
+    margin-bottom: 4px;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: row;
+  }
+  .sec_filters > div{
+    min-width: max-content;
+    width: max-content;
+    overflow: scroll;
+  }
+
+
+
+}
+
+
+.sec_filters > div {
+  border: 1px solid var(--green_d);
+  border-radius: 8px;
+  padding: 1rem ;
+  margin: 1rem;
+
+}
+.sec_filters > div > h5 {
+  margin-bottom: 0.5rem;
+}
+
+.sec_area_chooser{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 4px;
+}
+.sec_area_chooser>.area{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  align-items: center;
+  gap: 4px;
+}
+
+.sec_area_chooser>.area img{
+  height: 40px;
+  width: 75px;
+  border-radius: 8px;
+}
+.sec_area_chooser>.area span{
+  width: 60px;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.sec_area_chooser>.area+.selected >img{
+  border: 2px solid var(--green_d);
+  padding: 1px;
+}
+
+.sec_range{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+}
+.sec_range input[type='range']{
+  -webkit-appearance: none !important;
+  background:var(--green);
+  border-radius: 2rem;
+  height:2px;
+}
+.sec_range input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background:var(--green_d);
+  height:15px;
+  width:15px;
+  border-radius: 10px;
+}
+
+.sec_additional_filters > p{
+  margin-bottom: 0.5rem;
+  vertical-align: middle;
+}
+
+.sec_additional_filters input{
+ filter: hue-rotate(240deg) ;
+  vertical-align: middle;
+  margin-right: 4px;
 }
