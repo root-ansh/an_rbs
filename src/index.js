@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './commons/index.css';
-import {BrowserRouter, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {NavBar} from "./commons/components/NavBar";
 import {Footer} from "./commons/components/Footer";
+import {Rooms} from "./pages/Rooms";
+
 
 
 
@@ -12,6 +14,8 @@ function App() {
         <BrowserRouter>
             <NavBar/>
             <Routes>
+                <Route path="/" element={<Rooms/>}/>
+                <Route path="/rooms" element={<Rooms/>}/>
 
             </Routes>
             <Footer/>
