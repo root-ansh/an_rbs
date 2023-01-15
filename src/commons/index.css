@@ -740,6 +740,7 @@ hr {
 }
 .rc>i{
     font-size: 0.7rem;
+    margin-right: 4px;
 }
 
 .rc_good{
@@ -803,6 +804,9 @@ hr {
     font-weight: bolder;
     color: var(--black);
 }
+.rcb_charges >p:last-child >i{
+    margin-right: 4px;
+}
 
 
 .rcb_book{
@@ -828,9 +832,9 @@ hr {
 
 
 @media only screen and (max-device-width: 480px) {
-    html{
-        font-size: 20px;
-    }
+    /*html{*/
+    /*    font-size: 20px;*/
+    /*}*/
     .sec_filters {
 
         position: absolute;

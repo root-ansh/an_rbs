@@ -1,11 +1,18 @@
 import  img_mmb from '../commons/img_mmb.png'
 import  img_pb from '../commons/img_pb.png'
+import {useState} from "react";
 
+function SpaceDiv(){
+    return (
+        <div className="sec_space"></div>
+    )
+}
 
-function Filters(){
+function Filters({hideSection}){
+    // hideSection = "" or "sec_filters_hide"
     return(
-        <div className="sec_filters ">
-            <div className="sec_space"></div>
+        <div className={"sec_filters"+" "+hideSection}>
+            <SpaceDiv/>
             <div className="sec_area">
                 <h5 className="h5">Place:</h5>
                 <div className="sec_area_chooser">
@@ -21,7 +28,6 @@ function Filters(){
 
                 </div>
             </div>
-
             <div className="sec_cost">
                 <h5 className="h5">Room charges:</h5>
                 <div className="sec_range">
@@ -40,7 +46,6 @@ function Filters(){
                 </div>
                 <p>4 people</p>
             </div>
-
             <div className="sec_additional_filters">
                 <h5 className="h5">Additional Filters:</h5>
 
@@ -152,67 +157,87 @@ function SingleRoom(){
         </div>
     )
 }
+function FilterResults({expandSection}){
+    // expandSection = "" or  "sec_result_area_fw"
+
+    return(
+        <div className={"sec_result_area "+expandSection}>
+
+            <div className="room_list">
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+                <SingleRoom/>
+
+
+            </div>
+
+            <SpaceDiv/>
+
+            <div className="sec_pagination">
+                <p className="h5">
+                    You are currently viewing page &nbsp;
+                    <span id="sp_page_current">{"currentPg"}&nbsp;</span>of &nbsp;
+                    <span id="sp_page_total">{"totalPg"}&nbsp;</span>( <span id="sp_page_resultcount">{"totalResults"}&nbsp;</span> results)
+                </p>
+                <p>
+                    <button id="bt_pageprevious" className="bt bt_pill">
+                        <i className="fa fa-arrow-left"></i>
+                        <span>Previous</span>
+                    </button>
+
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <button id="bt_page1" className="bt bt_pill bt_selected">
+                        <i className="fa fa-home"></i>
+                        <span>Home</span>
+                    </button>
+
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <button id="bt_pagenext" className="bt bt_pill">
+                        <span>Next</span>
+                        <i className="fa fa-arrow-right"></i>
+                    </button>
+
+                </p>
+            </div>
+
+        </div>
+    )
+}
 
 export function Rooms(){
+    let [ui,updateUi] = useState({filters: "",results: ""})
+
+
+    let toggleFilters = function (){
+        if(ui.filters===""){
+            updateUi({filters: "sec_filters_hide", results:"sec_result_area_fw"})
+        }
+        else {
+            updateUi({filters: "",results: ""})
+        }
+    }
+
+
     return(
         <div className="sec_rooms">
             <div className="sec_mobile_button">
-                <button className="bt bt_pill bg_green_d_t_white" id="bt_filter">
+                <button className="bt bt_pill bg_green_d_t_white" onClick={(e)=>toggleFilters()}>
                     <i className="fa-solid fa-filter"></i>
                     <span>filters</span>
                 </button>
             </div>
-            <Filters/>
+            <Filters hideSection={ui.filters}/>
 
-            <div className="sec_result_area ">
-
-                <div className="room_list">
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-                    <SingleRoom/>
-
-
-                </div>
-
-                <div className="sec_space"></div>
-
-                <div className="sec_pagination">
-                    <p className="h5">
-                        You are currently viewing page &nbsp;
-                        <span id="sp_page_current">{"currentPg"}&nbsp;</span>of &nbsp;
-                        <span id="sp_page_total">{"totalPg"}&nbsp;</span>( <span id="sp_page_resultcount">{"totalResults"}&nbsp;</span> results)
-                    </p>
-                    <p>
-                        <button id="bt_pageprevious" className="bt bt_pill">
-                            <i className="fa fa-arrow-left"></i>
-                            <span>Previous</span>
-                        </button>
-
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-
-                        <button id="bt_page1" className="bt bt_pill bt_selected">
-                            <i className="fa fa-home"></i>
-                            <span>Home</span>
-                        </button>
-
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-
-                        <button id="bt_pagenext" className="bt bt_pill">
-                            <span>Next</span>
-                            <i className="fa fa-arrow-right"></i>
-                        </button>
-
-                    </p>
-                </div>
-
-            </div>
+            <FilterResults expandSection={ui.results}/>
 
 
         </div>
