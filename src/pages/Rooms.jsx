@@ -11,17 +11,17 @@ function SpaceDiv(){
 function Filters({hideSection}){
     // hideSection = "" or "sec_filters_hide"
     return(
-        <div className={"sec_filters"+" "+hideSection}>
+        <div className={`sec_filters ${hideSection}`}>
             <SpaceDiv/>
             <div className="sec_area">
                 <h5 className="h5">Place:</h5>
                 <div className="sec_area_chooser">
                     <div className="area">
-                        <img srcSet={img_mmb}></img>
+                        <img alt="panda" srcSet={img_mmb}></img>
                         <span>Manav Mitra Bhawan</span>
                     </div>
                     <div className="area selected">
-                        <img srcSet={img_pb}></img>
+                        <img alt="panda"  srcSet={img_pb}></img>
                         <span>Prout  Bhawan</span>
                     </div>
 
