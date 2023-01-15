@@ -1,6 +1,8 @@
 {
   "name": "anand_nagar_rbs",
   "description": "AnandaNagar Room Booking System - An initiative by PROUT Tech Team",
+  "author": "https://github.com/root-ansh",
+  "url": "https://anrbs.netlify.app/rooms",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
