@@ -1,0 +1,125 @@
+
+
+.hide {
+    display: none !important;
+}
+
+.expand_onhover_parent:hover > .expand_on_hover {
+    display: inline !important;
+}
+.expand_on_hover {
+    display: none !important;
+}
+
+.no_scrollbars {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.no_scrollbars::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.h1 {font-size: var(--h1);}
+
+.h2 {font-size: var(--h2);}
+
+.h3{font-size: var(--h3);}
+
+.h4 {font-size: var(--h4);}
+
+.h5{font-size: var(--h5);}
+
+.h6 {font-size: var(--h6);}
+
+.bt {
+    padding: 0.7rem 1rem;
+    text-align: center;
+    color: var(--black);
+    background: var(--white);
+    box-shadow: var(--gray_2) 2px 2px 3px;
+    font-size: 1rem;
+}
+
+.bt > span {
+    margin-left: 1rem;
+}
+
+.bt:active {
+    box-shadow: var(--gray_2) 1px 1px 2px;
+}
+
+.bt_flat {
+    box-shadow: none;
+}
+
+.bt_pill {
+    border-radius: 3rem;
+}
+
+.bt_selected, .bt_selected:hover, .bt_selected:focus, .bt_selected:active {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.bg_green_d_t_white {
+    color: var(--white);
+    background-color: var(--green_d);
+}
+
+.bg_gray2_text_black{
+    color: var(--black);
+    background-color: var(--gray_2);
+}
+.sec_nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+    /*box-shadow: var(--gray_2) 2px 2px 3px;*/
+    background-color: var(--gray_1);
+    box-shadow: var(--gray_2) 1px 1px 1px;
+}
+
+.nav_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sec_nav > a, .sec_nav > a:hover, .sec_nav > a:visited, .sec_nav > a:link, .sec_nav > a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_header > img {
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+.sec_footer {
+    margin-top: 2rem;
+    background-color: var(--gray_1);
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 4rem;
+    position: relative;
+}
+
+.sec_footer a, .sec_footer a:hover, .sec_footer a:visited, .sec_footer a:active {
+    margin-left: 0.5rem;
+    color: var(--green_d);
+    text-decoration: none;
+}
+
+.sec_space {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 5rem !important;
+    width: 0 !important;
+    /*background: var(--gray_2);*/
+    background: transparent;
+}

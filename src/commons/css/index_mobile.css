@@ -1,0 +1,81 @@
+
+@media only screen and (max-width: 767px) {
+    /*html{*/
+    /*    font-size: 20px;*/
+    /*}*/
+    .sec_filters {
+
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        transition: left 0.5s ease;
+
+    }
+
+    .sec_result_area {
+        height: 100%;
+        width: 100%;
+        transition: width 0.5s ease;
+        float: left;
+        overflow: auto;
+    }
+    .sec_filters_hide {
+        /*width: 0;*/
+        left: 0;
+        transition: left 0.5s ease;
+        /*transition: width 0.5s ease;*/
+        border: none;
+
+    }
+
+
+    .sec_result_area_fw {
+    }
+
+
+    .room{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .room_description{
+        font-size: 0.5rem;
+    }
+
+    .sec_mobile_button{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        padding: 1rem;
+    }
+
+
+}
+
+
+/*@media only screen and (max-device-width: 480px) {*/
+/*  .sec_result_area{width: 100%}*/
+/*  .sec_filters{*/
+/*    height: 14rem;*/
+/*    width: 100%;*/
+/*    border-right: none;*/
+/*    border-bottom:  2px solid var(--gray_2);*/
+/*    margin-right: 0;*/
+/*    margin-bottom: 4px;*/
+/*    overflow: auto;*/
+
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*  }*/
+/*  .sec_filters > div{*/
+/*    min-width: max-content;*/
+/*    width: max-content;*/
+/*    overflow: scroll;*/
+/*  }*/
+
+
+/*}*/

@@ -1,6 +1,5 @@
 import {Link, useLocation} from "react-router-dom";
-import  '../index.css'
-import  logo_transparent from '../logo_transparent.png'
+import  logo_transparent from '../images/logo_transparent.png'
 import {MyRoutes, NavBarLinksArray} from "../../data/MyRoutes";
 
 function  isLoggedIn(){
@@ -9,7 +8,6 @@ function  isLoggedIn(){
 
 function NavBarEntry(route){
     let currentRouterPath = useLocation().pathname
-    console.log("current route=",route)
     let ui = ""
     if (route.routerLink === MyRoutes.HOME.routerLink) {
         ui = (<div className="nav_header">
