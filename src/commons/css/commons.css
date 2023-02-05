@@ -1,4 +1,7 @@
+.ps-2{padding-left: 2rem !important;}
 
+
+.ml-auto{margin-left: auto !important;}
 
 .hide {
     display: none !important;
@@ -84,20 +87,25 @@
 
 .nav_header {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
 }
+.nav_header > img {
+    height: 3rem;
+    width: 3rem;
+}
+.nav_header > p {
+    font-size: 2rem;
+}
+
 
 .sec_nav > a, .sec_nav > a:hover, .sec_nav > a:visited, .sec_nav > a:link, .sec_nav > a:active {
     text-decoration: none;
     color: inherit;
 }
 
-.nav_header > img {
-    height: 4.5rem;
-    width: 4.5rem;
-}
 
 .sec_footer {
     margin-top: 2rem;
@@ -106,6 +114,7 @@
     font-size: 1.4rem;
     padding: 4rem;
     position: relative;
+    color: black;
 }
 
 .sec_footer a, .sec_footer a:hover, .sec_footer a:visited, .sec_footer a:active {

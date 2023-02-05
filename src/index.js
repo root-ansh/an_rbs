@@ -7,8 +7,6 @@ import './commons/css/index.css';
 import './commons/css/index_mobile.css';
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {NavBar} from "./commons/components/NavBar";
-import {Footer} from "./commons/components/Footer";
 import {Rooms} from "./pages/Rooms";
 import {MyRoutes} from "./data/MyRoutes";
 import {CheckoutDetails} from "./pages/CheckoutDetails";
@@ -16,14 +14,11 @@ import {CheckoutDetails} from "./pages/CheckoutDetails";
 function App() {
     return (
         <BrowserRouter>
-            <NavBar/>
             <Routes>
                 <Route path={MyRoutes.HOME.routerLink} element={<Rooms/>}/>
                 <Route path={MyRoutes.ROOMS.routerLink} element={<Rooms/>}/>
                 <Route path={MyRoutes.room_checkout_detail.routerLink} element={<CheckoutDetails/>}/>
-
             </Routes>
-            <Footer/>
         </BrowserRouter>
     );
 }

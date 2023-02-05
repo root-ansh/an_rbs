@@ -22,8 +22,7 @@ body{
 hr {
     height: 1px;
     background: var(--gray_2);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+
 }
 
 h1 {font-size: var(--h1);}

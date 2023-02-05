@@ -2,7 +2,7 @@ export const MyRoutes = {
     HOME: {
         path: "/",
         routerLink: "/",
-        name: "Ananda Nagar Room Booking System.",
+        name: "अतिथिशाला, a PROUT initiative",
         emoji_css: "fa fa-fire",
     },
     ROOMS: {

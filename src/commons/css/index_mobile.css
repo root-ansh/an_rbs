@@ -1,15 +1,29 @@
 
 @media only screen and (max-width: 767px) {
-    /*html{*/
-    /*    font-size: 20px;*/
-    /*}*/
+    .disblock_mobile{display: block;}
+    .dis_initial_mobile{display: initial}
+
+
     .sec_filters {
+        transition: left 0.5s ease;
 
         position: absolute;
-        top: 0;
         left: -100%;
+        top: 0;
+
         width: 100%;
+        height: 100%;
+
+    }
+    .sec_filters_show {
         transition: left 0.5s ease;
+
+        position: absolute;        /*to make sure that background content doesn't get scrolled*/
+        left: 0;
+        top:0;
+
+        width: 100%;
+        height: 100%;
 
     }
 
@@ -20,14 +34,7 @@
         float: left;
         overflow: auto;
     }
-    .sec_filters_hide {
-        /*width: 0;*/
-        left: 0;
-        transition: left 0.5s ease;
-        /*transition: width 0.5s ease;*/
-        border: none;
 
-    }
 
 
     .sec_result_area_fw {
@@ -35,24 +42,40 @@
 
 
     .room{
+        display: flex;
+        flex-direction: column;
         width: 100%;
         margin-right: 0;
+        margin-left: 0;
         margin-bottom: 1rem;
+    }
+
+    .room_img{
+        width: 100%;
     }
 
     .room_description{
         font-size: 0.5rem;
     }
 
-    .sec_mobile_button{
-        display: block;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-        padding: 1rem;
+    .rc{
+        padding:  0.25rem 0.25rem;
+
     }
 
+    .room_description{
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+
+    .cti_main{width: 95%; height: 20rem}
+    .cti_list{
+        width: 95%;
+        justify-content: flex-start;
+
+    }
+    .ct_roominfo{width:95%}
+    .ct_userinfo{width:95%}
 
 }
 

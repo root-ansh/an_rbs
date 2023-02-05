@@ -12,7 +12,7 @@ function NavBarEntry(route){
     if (route.routerLink === MyRoutes.HOME.routerLink) {
         ui = (<div className="nav_header">
             <img src={logo_transparent} alt="homepage icon"/>
-            <h3 className="h3">{route.name}</h3>
+            <p>{route.name}</p>
         </div>)
     } else {
         let selected = currentRouterPath === route.routerLink

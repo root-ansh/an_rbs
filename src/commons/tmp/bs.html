@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#882288" />
+        <meta name="description" content="AnandaNagar Room Booking System - An initiative by PROUT Tech Team"/>
+
+        <link rel="icon"  type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon_apple.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />     <!-- manifest.json provides metadata used when your web app is installed on a user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/-->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <title>AnandaNagar Room Booking System - An initiative by PROUT Tech Team</title>
+        <!--
+            Colors : purple #A300B0   | purple_shadow = 20%
+            Colors : orange #FF9300   | orange_shadow # 50% of #FFD900
+        -->
+
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+
+        <section>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid ">
+
+                    <a class="navbar-brand" href="#">
+                        <img src="https://simpleicons.vercel.app/apachecouchdb/FF9300" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        <span style="color: #A300B0">सम्मेलन</span>
+                    </a>
+
+                    <!-- collapse button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links_to_collapse" aria-controls="links_to_collapse" aria-expanded="false" aria-label="Toggle"><i class="fa-solid fa-bars"></i></button>
+
+
+                    <!-- links that will collapse: -->
+                    <div class="collapse navbar-collapse" id="links_to_collapse">
+
+                        <!-- links alongside brand -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Booking history</a></li>
+                        </ul>
+
+                        <!-- links on extreme right -->
+                        <button class="btn btn-outline-success" >Profile</button>
+
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-4" style="background-color: #faecec">
+                        <h3 class="">Filters</h3>
+                    </div>
+                    <div class="col-12 col-md-8" style="background-color: #f1f0f0">
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+<!--
+
+Bootstrap rules:
+
+column width =  minimumOf(horizontal area required by content to be in 1 row, some fixed value defined for screen size)
+
+eg
+    1. we have 12 cols
+    2. content of each column is  "a big bad brown wolf" which takes 18px( as per text width) in all screens area ,
+    3. screen widths are             laptop 180px | tab : 90px | mobile : 54px
+    4. bootstrap max col width is    laptop 20px  | tab : 15px | mobile : 30px
+
+    then, (a) how many cols will come in each screen? (b) what if each column took 30px?
+    ans (a) : for laptop min(textwidth,btc) = min(18,20) = 18 . therefore total columns in laptop = 180/18 =10
+              for tablet min(textwidth,btc) = min(18,15) = 15 . therefore total columns in laptop = 90/15  =6
+              for mobile min(textwidth,btc) = min(18,30) = 18 . therefore total columns in laptop = 54/18 = 3
+
+    ans (a) : for laptop min(textwidth,btc) = min(30,20) = 20 . therefore total columns in laptop = 180/20 =9
+              for tablet min(textwidth,btc) = min(30,15) = 15 . therefore total columns in laptop = 90/15  =6
+              for mobile min(textwidth,btc) = min(30,30) = 30 . therefore total columns in laptop = 54/30 = 1
+
+-->
